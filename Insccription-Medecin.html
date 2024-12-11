@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Inscription-Medecin.css">
+</head>
+<body>
+    <div class="Inscription-Container">
+        <h1>Inscription Médecin</h1>
+        <p>Si vous êtes un patient <a href="Inscription-Patient.html">Inscrivez-vous ici</a></p>
+        <form action="inscription_medecin.php" method="post">
+            <label for="MedID" class="form-label">
+                <input type="text" name="MedID" id="MedID" placeholder="Numéro de Sécurité Sociale" required="required" class="form">
+            </label>
+            <label for="Nom" class="form-label">
+                <input type="text" name="Nom" id="Nom" placeholder="Nom" required="required" class="form">
+            </label>
+            <label for="Prenom" class="form-label">
+                <input type="text" name="Prenom" id="Prenom" placeholder="Prénom" required="required" class="form">
+            </label>
+            <label for="Sex" class="form-label">
+                <select name="Sex" id="Sex" required="required" class="form">
+                    <option value="M">Masculin</option>
+                    <option value="F">Féminin</option>
+                </select>
+            </label>
+            <label for="Specialites" class="form-label">
+                <input type="text" name="Specialites" id="Specialites" placeholder="Spécialités" required="required" class="form">
+            </label>
+            <label for="Age" class="form-label">
+                <input type="number" name="Age" id="Age" placeholder="Âge" required="required" class="form">
+            </label>
+            <label for="MotDePasse" class="form-label">
+                <input type="password" name="MotDePasse" id="MotDePasse" placeholder="Mot de passe" required="required" class="form">
+            </label>
+            <input type="password" name="passw2" id="passw2" placeholder="Confirmer le mot de passe" required = "required" class="soumettres">
+            <label for="AdresseMail" class="form-label">
+                <input type="email" name="AdresseMail" id="AdresseMail" placeholder="Adresse mail" required="required" class="form">
+            </label>
+            <input type="submit" value="Créer un compte" class="soumettre">
+        </form>
+        
+        <P>Déjà un compte ? <a href="Connexion-Patient.html">Connectez-vous</a></P>
+    </div>
+    <p class="copy"> &copy;copyright 2024 <span class="signature">MrBrain</span>. Tous droits réservés.</p>
+</body>
+</html>

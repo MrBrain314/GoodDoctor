@@ -1,0 +1,586 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Corps de la page */
+body{
+
+    /*background-image: url(FondBleu.jpg);*/
+    background-color: white;
+   
+}
+
+/* Barre de navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: white;
+}
+
+header{
+    background-color: gray
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    color: rgb(98, 228, 98);
+    font-weight: bold;
+}
+
+.good{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    color: rgb(98, 228, 98);
+    font-weight: bold;
+}
+header .logo img {
+    height: 80px;
+    border-radius: 50%;
+}
+
+header nav {
+    flex: 1;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.Connexion {
+    display: flex;
+    gap: 10px;
+}
+
+.Connexion .login,
+.Connexion .signup {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+    text-decoration: none;
+}
+
+.Connexion .login {
+    background-color: rgb(14, 237, 212);
+    color: black;
+}
+
+.Connexion .signup {
+    background-color: rgb(14, 237, 212);
+    color: black;
+}
+
+/* Section principale */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 40px;
+}
+
+.image-main img {
+    width: 480px;
+    height: 500px;
+    border-radius: 500px;
+}
+
+.main-content {
+    text-align: center;
+    color:  rgb(25, 30, 31);
+}
+
+
+main .doctor-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 0 auto 20px;
+}
+
+main .main-content h1 {
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+.welcome{
+    color: rgb(98, 228, 98);
+}
+
+main .main-content p{
+    font-size: 2rem;
+    font-weight: 90;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.searching {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.searching input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.nousconnaitre{
+    display: flex;
+    flex-direction: row;
+    background-color: darkslategray;
+    justify-content: center;
+    gap: 50px;
+}
+
+/*section {
+    padding: 50px 20px;
+    margin: 50px 0;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}*/
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.copy{
+    font-size: larger;
+    font-weight: bolder;
+    color:  rgb(25, 30, 31);
+    text-align: center;
+}
+.signature{
+    color: rgb(98, 228, 98);
+}
+
+/* Section "Nos Services" */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.services-title {
+    font-size: 36px;
+    font-weight: bold;
+    color:  rgb(25, 30, 31);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Conteneur des services */
+.services-container {
+    /*display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+    justify-content: center;
+}
+
+/* Élément individuel */
+.service-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Image du service */
+.service-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Titre du service */
+.service-title {
+    font-size: 24px;
+    color: #5cb3cc;
+    margin: 15px 0 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Description du service */
+.service-description {
+    font-size: 16px;
+    color: #666;
+    padding: 0 20px 20px;
+}
+
+
+/* Section À propos */
+.about-us {
+   
+    background-color: #f9f9f9; 
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.about-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-content {
+    max-width: 500px;
+}
+
+.about-content h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000; /* Couleur noire */
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Couleur grise */
+    margin-bottom: 20px;
+}
+
+.read-more {
+    background-color: #5dc4c1; /* Couleur du bouton */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.read-more:hover {
+    background-color: #4ba7a5; /* Couleur au survol */
+}
+
+/* Section "Nous Contacter" */
+.contact-us {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+/* Conteneur du formulaire et de la carte */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Formulaire */
+.contact-form {
+    flex: 1 1 45%; /*?????*/
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb3cc;
+    color: white;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #4a9bb3;
+}
+
+/* Image de la carte */
+.contact-map {
+    flex: 1 1 45%; /*??????*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contact-map img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-map img:hover {
+    transform: scale(2);
+}
+
+/*.image-main img:hover{
+    transform: scale(0.75);
+}
+
+.image-main img {
+    transition: transform 0.3s ease;
+} */
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .contact-us {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-form,
+    .contact-map {
+        flex: 1 1 100%;
+    }
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .searching {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .searching input {
+        width: 100%;
+    }
+}
+
+/*Footer*/
+
+.footer-container{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+gap: 80px;
+background-color: rgb(25, 30, 31);
+justify-content: center;
+color: white;
+padding-bottom: 100px;
+font-weight: bolder;
+}
+
+.contacts-us{
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.nous-joindre p{
+    text-align: center;
+    font-weight: bolder;
+    position: relative;
+    right: 40px;
+
+}
+
+.nous-joindre img{
+    position: relative;
+    left: 50px;
+    font-weight: bolder;
+}
+
+.nous-joindres p{
+    position: relative;
+    right: 43px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.nous-joindress p{
+    position: relative;
+    right: 17px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.nous-joindre:hover, .nous-joindres:hover, .nous-joindress:hover{
+    color: red;
+}
+
+
+.logo-final img{
+    height: 100px;
+    border-radius: 50%;
+}
+
+.other{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.medical{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-medical{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes égales */ 
+    grid-template-rows: repeat(2, 1fr); /* Crée 2 lignes égales */ 
+    gap: 10px; /* Ajoute un espace de 10px entre chaque case */ 
+    padding: 0px; /* Ajoute un padding autour de la grille */
+    flex-wrap: wrap;
+    transition: transform 0.3s ease;
+}
+
+.image-medical img{
+    width: 95%;
+    height: 95%;
+}
+
+.image-medical:hover{
+    transform: scale(1.2);
+}
+
+.else{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.else p{
+    position: relative;
+    bottom: 15px;
+}
+
+.nosinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+   
+}
+
+input{
+    height: 30px;
+}
+
+.abonne{
+    cursor: pointer;
+    background-color: rgb(135, 206, 235);
+    height: 40px;
+    color: white;
+    font-weight: bolder;
+    font-size: 1,5em;
+    width: 50%;
+}
+
+.abonne:hover{
+background-color:  rgb(25, 30, 31);
+}
+
+.nosreseau{
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); /* Crée 4 colonnes égales */ 
+    gap: 10px; /* Ajoute un espace de 10px entre chaque case */ 
+    flex-wrap: wrap;
+    position: relative;
+    top: 15px;
+}
+
+.nosreseau img{
+    width:  99.99%;
+    height:  99.99%;
+}

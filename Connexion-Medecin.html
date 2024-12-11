@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Connexion-Medecin.css">
+</head>
+<body>
+    <div class="Inscription-Container">
+        <h1>Connexion Médecin</h1>
+        <p>Si vous êtes un patient <a href="Connexion-Patient.html">Connectez-vous ici</a></p>
+        <form action="connection_medecin.php" method="post">
+            <label for="MedID" class="form-label">
+            <input type="text" name="MedID" id="MedID" placeholder="Ton Identifiant" required = "required" class="identite">
+            </label>
+            <label for="MotDePasse" class="form-label">
+            <input type="password" name="MotDePasse" id="MotDePasse" placeholder="Mot de passe" required = "required" class="motdepasse">
+            </label>
+            <input type="submit" value="Connectez-vous" class="soumettre">
+        </form>
+        <P>Vous n'avez-pas de compte ? <a href="Inscription-Patient.html">Créez-en un</a></P>
+    </div>
+    <p class="copy"> &copy;copyright 2024 <span class="signature">MrBrain</span>. Tous droits réservés.</p>
+</body>
+</html>
+
+
