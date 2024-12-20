@@ -4,6 +4,7 @@ session_start();
 
 $Prenom = isset($_SESSION['Prenom']) ? $_SESSION['Prenom'] : 'Prénom';
 $Nom = isset($_SESSION['Nom']) ? $_SESSION['Nom'] : 'Nom';
+$SecuID = $_SESSION['SecuID'];
 ?>
 
 
@@ -39,7 +40,7 @@ $Nom = isset($_SESSION['Nom']) ? $_SESSION['Nom'] : 'Nom';
                 <div class="profil-details">
                     <img src="image/Photo profil.jpeg" alt="Photo du patient" class="menu-photo">
                     <span class="profil-nom"><?php echo htmlspecialchars($Prenom) . ' ' . htmlspecialchars($Nom); ?></span>
-                    <span class="menu-email">Email non défini</span> 
+                    <span class="menu-email"><?php echo htmlspecialchars($SecuID) ?></span>
                 </div>
                 <a href="profil.html">Mon Profil</a>
                 <a href="parametres.html">Paramètres</a>
