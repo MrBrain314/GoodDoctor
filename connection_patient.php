@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de données
-$conn = new mysqli('localhost', 'root', 'Data@Brain314', 'gooddoctor');
+$conn = new mysqli('localhost', 'root', '', 'gooddoctor');
 
 // Vérifiez la connexion
 if ($conn->connect_error) {
@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
         $_SESSION['Prenom'] = $user['Prenom'];
         $_SESSION['Nom'] = $user['Nom'];
         // Rediriger vers une autre page si nécessaire
-        header("Location: page_de_maintenance.html");
+        header("Location: Interface-Patient.php");
         exit();
     } else {
         // Mot de passe incorrect

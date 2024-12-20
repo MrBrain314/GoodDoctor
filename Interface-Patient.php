@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+
+$Prenom = isset($_SESSION['Prenom']) ? $_SESSION['Prenom'] : 'Prénom';
+$Nom = isset($_SESSION['Nom']) ? $_SESSION['Nom'] : 'Nom';
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,7 +20,7 @@
         <!-- Barre de navigation -->
         <header>
             <div class="logo">
-                <img src="Logo.jpg" alt="Logo de téléconsultation">
+                <img src="image/Logo.jpg" alt="Logo de téléconsultation">
                 <p>GoodDoctor</p>
             </div>
             <nav>
@@ -18,23 +28,25 @@
                 <a href="#services">Nos Services</a>
                 <a href="#about">À Propos</a>
                 <a href="#contact">Nous Contacter</a>
+                <a href="deposer_document.php"> Mes Documents</a>
             </nav>
             <div class="profil-menu">
-                <div class="profil-info" onclick="toggleMenu()">
-                    <img src="Photo profil.jpeg" alt="Photo du patient" class="profil-photo">
-                    <span class="profil-nom">Jean Dupont</span>
+             <div class="profil-info" onclick="toggleMenu()">
+                <img src="image/Photo profil.jpeg" alt="Photo du patient" class="profil-photo">
+                <span class="profil-nom"><?php echo htmlspecialchars($Prenom) . ' ' . htmlspecialchars($Nom); ?></span>
+             </div>
+            <div class="menu-deroulant" id="menu">
+                <div class="profil-details">
+                    <img src="image/Photo profil.jpeg" alt="Photo du patient" class="menu-photo">
+                    <span class="profil-nom"><?php echo htmlspecialchars($Prenom) . ' ' . htmlspecialchars($Nom); ?></span>
+                    <span class="menu-email">Email non défini</span> 
                 </div>
-                <div class="menu-deroulant" id="menu">
-                    <div class="profil-details">
-                        <img src="Photo profil.jpeg" alt="Photo du patient" class="menu-photo">
-                        <span class="menu-nom">Jean Dupont</span>
-                        <span class="menu-email">jean.dupont@example.com</span>
-                    </div>
-                    <a href="profil.html">Mon Profil</a>
-                    <a href="parametres.html">Paramètres</a>
-                    <a href="deconnexion.html">Se Déconnecter</a>
+                <a href="profil.html">Mon Profil</a>
+                <a href="parametres.html">Paramètres</a>
+                <a href="deconnexion.php">Se Déconnecter</a>
                 </div>
             </div>
+
             
             
             
@@ -43,7 +55,7 @@
         <!-- Section centrale -->
         <main>
             <div class="image-main">
-                <img src="Doctoresse.jpg" alt="Médecin en téléconsultation">
+                <img src="image/Doctoresse.jpg" alt="Médecin en téléconsultation">
             </div>
             <div class="main-content">
                     <h1>Bienvenue sur <span class="welcome">GoodDoctor</span></h1>
@@ -97,7 +109,7 @@
             <div class="services-container">
                 <!-- Service 1: Prise de rendez-vous -->
                 <div class="service-item">
-                    <img src="RDV.jpg" alt="Prise de rendez-vous" class="service-image">
+                    <img src="image/RDV.jpg" alt="Prise de rendez-vous" class="service-image">
                     <h3 class="service-title">Prise de rendez-vous</h3>
                     <p class="service-description">
                         Planifiez facilement vos rendez-vous grâce à notre plateforme intuitive et rapide.
@@ -106,7 +118,7 @@
         
                 <!-- Service 2: Consultation Vidéos -->
                 <div class="service-item">
-                    <img src="Teleconsultation.jpg" alt="Consultation Vidéos" class="service-image">
+                    <img src="image/Teleconsultation.jpg" alt="Consultation Vidéos" class="service-image">
                     <h3 class="service-title">Consultation Vidéos</h3>
                     <p class="service-description">
                         Accédez à des consultations vidéo en direct avec nos experts, où que vous soyez.
@@ -115,7 +127,7 @@
         
                 <!-- Service 3: Suivis -->
                 <div class="service-item">
-                    <img src="Suivi.jpg" alt="Suivis" class="service-image">
+                    <img src="image/Suivi.jpg" alt="Suivis" class="service-image">
                     <h3 class="service-title">Suivis</h3>
                     <p class="service-description">
                         Profitez d'un suivi personnalisé pour garantir votre satisfaction et vos progrès.
@@ -129,7 +141,7 @@
             <section id="about" class="about-us"">
                 <div class="about-container">
                     <div class="about-image">
-                        <img src="about-img.png" alt="Femme sur un canapé">
+                        <img src="image/about-img.png" alt="Femme sur un canapé">
                     </div>
                     <div class="about-content">
                         <h2>À PROPOS</h2>
@@ -158,7 +170,7 @@
             
                     <!-- Image de la carte -->
                     <div class="contact-map">
-                        <img src="Contacter.png" alt="Carte de localisation" style="width: 100%; height: auto; border-radius: 10px;">
+                        <img src="image/Contacter.png" alt="Carte de localisation" style="width: 100%; height: auto; border-radius: 10px;">
                     </div>
                 </div>
             </section>
@@ -167,22 +179,22 @@
                <div class="footer-container">
                     <div class="contacts-us">
                         <div class="logo-final">
-                            <img src="LOGOFINAL.png" alt="">
+                            <img src="image/LOGOFINAL.png" alt="">
                         </div>
                         <div class="nous-voir">
                             <div class="nous-joindres">
-                                <img src="Tel.png" alt="tel">
+                                <img src="image/Tel.png" alt="tel">
                                 <p>Call : +33 0753843098</p>
                                 
                             </div>
                         </div>
                         <div class="nous-joindre">
-                            <img src="Mail.png" alt="email">
+                            <img src="image/Mail.png" alt="email">
                             <p>Email : bastououro314@gmail.com</p>
                             
                         </div>
                         <div class="nous-joindress">
-                            <img src="Location.png" alt="">
+                            <img src="image/Location.png" alt="">
                             <p>Localisation</p>
                         </div>
                     </div>
@@ -197,12 +209,12 @@
                         <div class="medical">
                             <p class="texte-medical">Vitalité</p>
                             <div class="image-medical">
-                                <img src="M5.png" alt="m5">
-                                <img src="M1.png" alt="m1">
-                                <img src="M4.png" alt="m4">
-                                <img src="M2.png" alt="m2">
-                                <img src="M6.png" alt="m6">
-                                <img src="M3.png" alt="m3">
+                                <img src="image/M5.png" alt="m5">
+                                <img src="image/M1.png" alt="m1">
+                                <img src="image/M4.png" alt="m4">
+                                <img src="image/M2.png" alt="m2">
+                                <img src="image/M6.png" alt="m6">
+                                <img src="image/M3.png" alt="m3">
                             </div>
                         </div>
                         <div class="else">
@@ -216,10 +228,10 @@
                                     <input type="submit" value="S'abonner" class="abonne">
                             </form>
                             <div class="nosreseau">
-                                <img src="Face.png" alt="Facebook">
-                                <img src="Twitter.png" alt="X">
-                                <img src="Insta.png" alt="Insta">
-                                <img src="Link.png" alt="Linked">
+                                <img src="image/Face.png" alt="Facebook">
+                                <img src="image/Twitter.png" alt="X">
+                                <img src="image/Insta.png" alt="Insta">
+                                <img src="image/Link.png" alt="Linked">
                             </div>
                         </div>
                     </div>
