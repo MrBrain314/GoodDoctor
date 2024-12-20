@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['document'])) {
         $stmt->bind_param("iss", $user_id, $file_name, $file_path);
         $stmt->execute();
 
-        echo "Document déposé avec succès. <a href='Interface-Patient.html'>Retour</a>";
+        echo "Document déposé avec succès. <a href='Interface-Patient.php'>Retour</a>";
     } else {
         echo "Erreur lors du dépôt du document.";
     }
