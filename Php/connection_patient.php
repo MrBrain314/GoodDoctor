@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de données
-$conn = new mysqli('localhost', 'root', '', 'gooddoctor');
+$conn = new mysqli('localhost', 'root', 'Data@Brain314', 'gooddoctor');
 
 // Vérifiez la connexion
 if ($conn->connect_error) {
