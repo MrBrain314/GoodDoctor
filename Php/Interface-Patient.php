@@ -55,19 +55,18 @@ $SecuID = $_SESSION['SecuID'];
                 <img src="../image/Doctoresse.jpg" alt="Médecin en téléconsultation">
             </div>
             <div class="main-content">
+                <div class="texte">
                     <h1>Bienvenue sur <span class="welcome">GoodDoctor</span></h1>
-                    <p>Votre plateforme de  <br>
-                        prise de rendez-vous <br>
-                         en ligne.
-                    </p>
-                    <div class="searching">
-                        <form action="post" action="GoodDoctor.php">
-                            <p>
-                                <input type="search" name="doctor" id="doctor" placeholder="Recherchez un Docteur">
-                                <input type="search" name="specialite" id="specialite" placeholder="Recherchez une spécialité">
-                            </p>
-                        </form>
-                    </div>
+                    <p>Votre plateforme de prise de rendez-vous en ligne.</p>
+                </div>
+                <div class="searching">
+                    <form action="post" action="GoodDoctor.php">
+                        <p>
+                            <input type="search" name="doctor" id="doctor" placeholder="Recherchez un Docteur">
+                            <input type="search" name="specialite" id="specialite" placeholder="Recherchez une spécialité">
+                        </p>
+                    </form>
+                </div>
             </div>
         </main>
 
@@ -135,105 +134,115 @@ $SecuID = $_SESSION['SecuID'];
             
         
         <!-- Section À Propos -->
-            <section id="about" class="about-us"">
-                <div class="about-container">
-                    <div class="about-image">
-                        <img src="../image/about-img.png" alt="Femme sur un canapé">
-                    </div>
-                    <div class="about-content">
-                        <h2>À PROPOS</h2>
-                        <p>Chez <span class="good">GoodDoctor</span>, nous croyons en l'importance de la santé pour tous. 
-                            Nous offrons des services de prise de rendez-vous simplifiés, des consultations en ligne 
-                            accessibles et un suivi personnalisé, pour que vous puissiez rester en bonne santé sans effort.
-                        </p>
-                        <button class="read-more">En savoir plus</button>
-                    </div>
+        <section id="about" class="about-us"">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="../image/about-img.png" alt="Femme sur un canapé">
                 </div>
-            </section>
+                <div class="about-content">
+                    <h2>À PROPOS</h2>
+                    <p>Chez <span class="good">GoodDoctor</span>, nous croyons en l'importance de la santé pour tous. 
+                        Nous offrons des services de prise de rendez-vous simplifiés, des consultations en ligne 
+                        accessibles et un suivi personnalisé, pour que vous puissiez rester en bonne santé sans effort.
+                    </p>
+                    <button class="read-more">En savoir plus</button>
+                </div>
+            </div>
+        </section>
+
             <!--Nous contacter-->
-            <section id="contact" class="contact-us">
-                <div class="contact-container">
-                    <!-- Formulaire -->
-                    <div class="contact-form">
-                        <h2>NOUS CONTACTER</h2>
-                        <form action="#" method="post">
-                            <input type="text" name="name" placeholder="Votre Nom" required>
-                            <input type="tel" name="phone" placeholder="Numéro de Téléphone" required>
-                            <input type="email" name="email" placeholder="Email" required>
-                            <textarea name="message" placeholder="Message" rows="4" required></textarea>
-                            <button type="submit">ENVOYER</button>
-                        </form>
-                    </div>
-            
-                    <!-- Image de la carte -->
-                    <div class="contact-map">
-                        <img src="../image/Contacter.png" alt="Carte de localisation" style="width: 100%; height: auto; border-radius: 10px;">
-                    </div>
+
+        <section id="contact" class="contact-us">
+            <div class="contact-container">
+                <!-- Formulaire -->
+                <div class="contact-form">
+                    <h2>NOUS CONTACTER</h2>
+                    <form action="#" method="post">
+                        <input type="text" name="name" placeholder="Votre Nom" required>
+                        <input type="tel" name="phone" placeholder="Numéro de Téléphone" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                        <button type="submit">ENVOYER</button>
+                    </form>
                 </div>
-            </section>
+        
+                <!-- Image de la carte -->
+                <div class="contact-map">
+                    <img src="../image/Contacter.png" alt="Carte de localisation" style="width: 100%; height: auto; border-radius: 10px;">
+                </div>
+            </div>
+        </section>
            
-            <footer>
-               <div class="footer-container">
-                    <div class="contacts-us">
-                        <div class="logo-final">
+        <!-- Footer, dernière section-->
+
+        <footer>
+            <div class="footer-container">
+
+                <div class="contacts-us">
+
+                    <div class="logo-final">
                             <img src="../image/LOGOFINAL.png" alt="">
-                        </div>
-                        <div class="nous-voir">
-                            <div class="nous-joindres">
-                                <img src="../image/Tel.png" alt="tel">
-                                <p>Call : +33 0753843098</p>
-                                
-                            </div>
-                        </div>
-                        <div class="nous-joindre">
+                    </div>
+
+                    <div class="nous-joindre">
+                            <img src="../image/Tel.png" alt="tel">
+                            <p>Call : +33 0753843098</p>
+                    </div>
+                    <div class="nous-joindre">
                             <img src="../image/Mail.png" alt="email">
                             <p>Email : bastououro314@gmail.com</p>
-                            
-                        </div>
-                        <div class="nous-joindress">
+                    </div>
+                    <div class="nous-joindre">
                             <img src="../image/Location.png" alt="">
                             <p>Localisation</p>
+                    </div>
+
+                </div>
+
+                <div class="other">
+                
+                    <div class="final-links">
+                        <div class="links">
+                            <a href="#services">Nos Services</a>
+                            <a href="#about">À Propos</a>
+                            <a href="#contact">Nous Contacter</a>
                         </div>
                     </div>
-                    <div class="other">
-                        <div class="final-links">
-                            <div class="links">
-                                <a href="#services">Nos Services</a>
-                                <a href="#about">À Propos</a>
-                                <a href="#contact">Nous Contacter</a>
-                            </div>
-                        </div>
-                        <div class="medical">
-                            <p class="texte-medical">Vitalité</p>
-                            <div class="image-medical">
-                                <img src="../image/M5.png" alt="m5">
-                                <img src="../image/M1.png" alt="m1">
-                                <img src="../image/M4.png" alt="m4">
-                                <img src="../image/M2.png" alt="m2">
-                                <img src="../image/M6.png" alt="m6">
-                                <img src="../image/M3.png" alt="m3">
-                            </div>
-                        </div>
-                        <div class="else">
-                            <div class="texte-else">
-                                <p>Inscrivez-vous pour nos informations</p>
-                            </div>
-                            <form action="traitement.php" method="post" class="nosinfo">
-                                <label for="email">
-                                    <input type="email" name="email" placeholder="Entrer votre mail" required>
-                                </label>
-                                    <input type="submit" value="S'abonner" class="abonne">
-                            </form>
-                            <div class="nosreseau">
-                                <img src="../image/Face.png" alt="Facebook">
-                                <img src="../image/Twitter.png" alt="X">
-                                <img src="../image/Insta.png" alt="Insta">
-                                <img src="../image/Link.png" alt="Linked">
-                            </div>
+
+                    <div class="medical">
+                    <p class="texte-medical">Vitalité</p>
+                        <div class="image-medical">
+                            <img src="../image/M5.png" alt="m5">
+                            <img src="../image/M1.png" alt="m1">
+                            <img src="../image/M4.png" alt="m4">
+                            <img src="../image/M2.png" alt="m2">
+                            <img src="../image/M6.png" alt="m6">
+                            <img src="../image/M3.png" alt="m3">
                         </div>
                     </div>
-               </div>
-            </footer>
+
+                    <div class="else">
+
+                        <div class="texte-else">
+                            <p>Inscrivez-vous pour nos informations</p>
+                        </div>
+                        <form action="traitement.php" method="post" class="nosinfo">
+                            <label for="email">
+                            <input type="email" name="email" placeholder="Entrer votre mail" required>
+                            </label>
+                            <input type="submit" value="S'abonner" class="abonne">
+                        </form>
+                        <div class="nosreseau">
+                            <img src="../image/Face.png" alt="Facebook">
+                            <img src="../image/Twitter.png" alt="X">
+                            <img src="../image/Insta.png" alt="Insta">
+                            <img src="../image/Link.png" alt="Linked">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
             <p class="copy"> &copy;copyright 2024 <span class="signature">MrBrain</span>. Tous droits réservés.</p>
 
             <script>

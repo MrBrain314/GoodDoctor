@@ -103,6 +103,7 @@ main {
 .main-content {
     text-align: center;
     color:  rgb(25, 30, 31);
+    justify-content: center;
 }
 
 
@@ -125,16 +126,19 @@ main .main-content h1 {
 }
 
 main .main-content p{
+    width: 50%;
     font-size: 2rem;
     font-weight: 90;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 auto; /* Centre le paragraphe horizontalement */
+    text-align: center; /* Centre le texte à l'intérieur */
 }
 
 .searching {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-top: -20px;
+    margin-top: 1.5rem;
 }
 
 .searching input {
@@ -256,6 +260,8 @@ section h2 {
 
 .about-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
     align-items: center;
 }
@@ -429,7 +435,7 @@ section h2 {
     }
     
     
-    .nous-joindre:hover, .nous-joindres:hover, .nous-joindress:hover{
+    .nous-joindre:hover{
         color: red;
     }
     
@@ -537,3 +543,90 @@ section h2 {
         width:  99.99%;
         height:  99.99%;
     } 
+
+    /*Media queries pour les telephones*/
+
+    @media screen and (max-width: 768px) {
+        header {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+           
+        }
+    
+        header .logo img {
+            height: 50px; /* Taille réduite */
+        }
+    
+        header nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: relative;
+            bottom: 0.8rem;
+        }
+    
+        header nav a {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+    
+        .Connexion {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 80%;
+        }
+    
+        .Connexion .login,
+        .Connexion .signup {
+            width: 100%; /* Boutons prennent toute la largeur */
+            text-align: center;
+        }
+    
+        main {
+            display: flex;
+            flex-direction: column; /* Place l'image et le texte en colonne */
+            gap: 20px;
+        }
+
+        .image-main img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+    
+        main .main-content h1 {
+            font-size: 2rem; /* Réduction de la taille du texte */
+        }
+    
+        main .main-content p {
+            font-size: 1.2rem;
+        }
+    
+        .searching {
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .searching input {
+            width: 100%;
+        }
+
+        .about-container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
+
+    /* Media queries pour les tablettes */
+
+  

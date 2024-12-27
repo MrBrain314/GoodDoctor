@@ -150,8 +150,6 @@ header nav a {
     display: flex;
 }
 
-
-
 /* Section principale */
 main {
     display: flex;
@@ -170,6 +168,7 @@ main {
 .main-content {
     text-align: center;
     color:  rgb(25, 30, 31);
+    justify-content: center;
 }
 
 
@@ -192,16 +191,19 @@ main .main-content h1 {
 }
 
 main .main-content p{
+    width: 50%;
     font-size: 2rem;
     font-weight: 90;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 auto; /* Centre le paragraphe horizontalement */
+    text-align: center; /* Centre le texte à l'intérieur */
 }
 
 .searching {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-top: -20px;
+    margin-top: 1.5rem;
 }
 
 .searching input {
@@ -211,6 +213,7 @@ main .main-content p{
     border: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Section Prise de Rendez-vous */
 .rdv-section {
@@ -526,192 +529,227 @@ section h2 {
     transition: transform 0.3s ease;
 } */
 
-/* Responsivité */
-@media (max-width: 768px) {
-    .contact-us {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .contact-form,
-    .contact-map {
-        flex: 1 1 100%;
-    }
-}
-
-/* Responsivité */
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .searching {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .searching input {
-        width: 100%;
-    }
-}
-
 /*Footer*/
 
 .footer-container{
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-gap: 80px;
-background-color: rgb(25, 30, 31);
-justify-content: center;
-color: white;
-padding-bottom: 100px;
-font-weight: bolder;
-}
-
-.contacts-us{
     display: flex;
-    flex-direction: row;
-    gap: 200px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 80px;
+    background-color: rgb(25, 30, 31);
     justify-content: center;
-    margin-top: 50px;
-    flex-wrap: wrap;
-}
-
-.nous-joindre p{
-    text-align: center;
-    font-weight: bolder;
-    position: relative;
-    right: 40px;
-
-}
-
-.nous-joindre img{
-    position: relative;
-    left: 50px;
-    font-weight: bolder;
-}
-
-.nous-joindres p{
-    position: relative;
-    right: 43px;
-    text-align: center;
-    font-weight: bolder;
-}
-
-.nous-joindress p{
-    position: relative;
-    right: 17px;
-    text-align: center;
-    font-weight: bolder;
-}
-
-.nous-joindre:hover, .nous-joindres:hover, .nous-joindress:hover{
-    color: red;
-}
-
-
-.logo-final img{
-    height: 100px;
-    border-radius: 50%;
-}
-
-.other{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 100px;
-    justify-content: center;
-    align-items: center;
-}
-.links{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    position: relative;
-}
-
-.links a{
     color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
-}
-
-.medical{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.image-medical{
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes égales */ 
-    grid-template-rows: repeat(2, 1fr); /* Crée 2 lignes égales */ 
-    gap: 10px; /* Ajoute un espace de 10px entre chaque case */ 
-    padding: 0px; /* Ajoute un padding autour de la grille */
-    flex-wrap: wrap;
-    transition: transform 0.3s ease;
-}
-
-.image-medical img{
-    width: 95%;
-    height: 95%;
-}
-
-.image-medical:hover{
-    transform: scale(1.2);
-}
-
-.else{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.else p{
-    position: relative;
-    bottom: 15px;
-}
-
-.nosinfo{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-   
-}
-
-input{
-    height: 30px;
-}
-
-.abonne{
-    cursor: pointer;
-    background-color: rgb(135, 206, 235);
-    height: 40px;
-    color: white;
+    padding-bottom: 100px;
     font-weight: bolder;
-    font-size: 1,5em;
-    width: 50%;
-}
+    }
+    
+    .contacts-us{
+        display: flex;
+        flex-direction: row;
+        gap: 200px;
+        justify-content: center;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+    
+    .nous-joindre{
+        text-align: center;
+    }
 
-.abonne:hover{
-background-color:  rgb(25, 30, 31);
-}
+    .nous-joindre p{
+        font-weight: bolder;
+    
+    }
+    
+    
+    .nous-joindre:hover{
+        color: red;
+    }
+    
+    
+    .logo-final img{
+        height: 100px;
+        border-radius: 50%;
+    }
+    
+    .other{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
 
-.nosreseau{
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); /* Crée 4 colonnes égales */ 
-    gap: 10px; /* Ajoute un espace de 10px entre chaque case */ 
-    flex-wrap: wrap;
-    position: relative;
-    top: 15px;
-}
+    }
+    
+    .links a{
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+    }
+    
+    .medical{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .image-medical{
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes égales */ 
+        grid-template-rows: repeat(2, 1fr); /* Crée 2 lignes égales */ 
+        gap: 10px; /* Ajoute un espace de 10px entre chaque case */ 
+        padding: 0px; /* Ajoute un padding autour de la grille */
+        flex-wrap: wrap;
+        transition: transform 0.3s ease;
+    }
+    
+    .image-medical img{
+        width: 95%;
+        height: 95%;
+    }
+    
+    .image-medical:hover{
+        transform: scale(1.2);
+    }
+    
+    .else{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .else p{
+        position: relative;
+        bottom: 15px;
+    }
+    
+    .nosinfo{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+       
+    }
+    
+    input{
+        height: 30px;
+    }
+    
+    .abonne{
+        cursor: pointer;
+        background-color: rgb(135, 206, 235);
+        height: 40px;
+        color: white;
+        font-weight: bolder;
+        font-size: 1,5em;
+        width: 50%;
+    }
+    
+    .abonne:hover{
+    background-color:  rgb(25, 30, 31);
+    }
+    
+    .nosreseau{
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); /* Crée 4 colonnes égales */ 
+        gap: 10px; /* Ajoute un espace de 10px entre chaque case */ 
+        flex-wrap: wrap;
+        position: relative;
+        top: 15px;
+    }
+    
+    .nosreseau img{
+        width:  99.99%;
+        height:  99.99%;
+    } 
 
-.nosreseau img{
-    width:  99.99%;
-    height:  99.99%;
-}
+    /*Media queries pour les telephones*/
+
+    @media screen and (max-width: 768px) {
+        header {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+           
+        }
+    
+        header .logo img {
+            height: 50px; /* Taille réduite */
+        }
+    
+        header nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: relative;
+            bottom: 0.8rem;
+        }
+    
+        header nav a {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+    
+        .Connexion {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 80%;
+        }
+    
+        .Connexion .login,
+        .Connexion .signup {
+            width: 100%; /* Boutons prennent toute la largeur */
+            text-align: center;
+        }
+    
+        main {
+            display: flex;
+            flex-direction: column; /* Place l'image et le texte en colonne */
+            gap: 20px;
+        }
+
+        .image-main img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+    
+        main .main-content h1 {
+            font-size: 2rem; /* Réduction de la taille du texte */
+        }
+    
+        main .main-content p {
+            font-size: 1.2rem;
+        }
+    
+        .searching {
+            flex-direction: column;
+            gap: 10px;
+        }
+    
+        .searching input {
+            width: 100%;
+        }
+
+        .about-container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
